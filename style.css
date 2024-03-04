@@ -1,0 +1,15 @@
+.gridContainer{
+    margin-top: 15px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 256px;
+}
+
+.gridsquare {
+    background-color: black;
+    color: white;
+    width: 16px;
+    height: 16px;
+}

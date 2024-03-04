@@ -11,6 +11,7 @@
 // Add a button at top to prompt user for squares per side
     // set limit of 100
 
+
 // create a container ("screen") div to house the grid squares - this is hard coded into DOM
     // .gridcontainer
 
@@ -18,13 +19,13 @@
 
 function createGrid() {
 
-    const squareTotal = 32;
+    const squareTotal = 256;
 
     gridContainer = document.querySelector('.gridContainer');
 
     for(i = 0; i < squareTotal; i++) {
         gridSquare = document.createElement('div');
-        gridSquare.setAttribute("class", "gridsqaure");
+        gridSquare.setAttribute("class", "gridsquare");
         gridContainer.appendChild(gridSquare);
         gridSquare.textContent = i;         // REMOVE FOR FINAL PRODUCT
 }
@@ -39,3 +40,5 @@ function removeGrid () {
     gridContainer.forEach(item => {item.remove();});
 
 }
+
+createGrid();
