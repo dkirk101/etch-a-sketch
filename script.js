@@ -11,18 +11,30 @@
 // Add a button at top to prompt user for squares per side
     // set limit of 100
 
+newSizeBtn = document.querySelector('#newsketch');
+
+newSizeBtn.addEventListener('click', () => {
+    squareTotal = prompt('Enter number of squares per side (less than 100)')
+        if(squareTotal > 100) {
+            alert('Please enter a positive number less than 100');
+        }
+        else{ 
+            createGrid(squareTotal)
+        }
+    })
+
+clearSketchBtn = document.querySelector('#clearsketch');
+
+clearSketchBtn.addEventListener('click', ()=> removeGrid());
 
 // create a container ("screen") div to house the grid squares - this is hard coded into DOM
     // .gridcontainer
 
 // create "gridsquare" divs, defaulting to 32 squares (32x32) using loop
 
-function createGrid() {
-
-    const squareTotal = 5;
+function createGrid(squareTotal) {
 
     squareWidth = 1 / squareTotal;
-
 
     gridContainer = document.querySelector('.gridContainer');
 
@@ -39,7 +51,7 @@ function createGrid() {
 
 // create button and prompt to take user input, store in a variable, and then generate that many square divs
 
-function removeGrid () {
+function removeGrid() {
     
     gridContainer = document.querySelector('.gridContainer');
 
@@ -48,5 +60,3 @@ function removeGrid () {
     }
 
 }
-
-createGrid();
