@@ -19,15 +19,20 @@
 
 function createGrid() {
 
-    const squareTotal = 256;
+    const squareTotal = 5;
+
+    squareWidth = 1 / squareTotal;
+
 
     gridContainer = document.querySelector('.gridContainer');
 
-    for(i = 0; i < squareTotal; i++) {
+    for(i = 0; i < squareTotal * (squareTotal); ++i) {
+
         gridSquare = document.createElement('div');
         gridSquare.setAttribute("class", "gridsquare");
+        gridSquare.style.width = `${squareWidth * 100}%`;
+        gridSquare.style.height = `${squareWidth * 100}%`
         gridContainer.appendChild(gridSquare);
-        gridSquare.textContent = i;         // REMOVE FOR FINAL PRODUCT
 }
 };
 
@@ -36,8 +41,11 @@ function createGrid() {
 
 function removeGrid () {
     
-    gridContainer = document.querySelectorAll('.gridContainer');
-    gridContainer.forEach(item => {item.remove();});
+    gridContainer = document.querySelector('.gridContainer');
+
+    while (gridContainer.hasChildNodes()) { 
+    gridContainer.firstChild.remove();
+    }
 
 }
 
