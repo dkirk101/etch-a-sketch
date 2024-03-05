@@ -31,8 +31,6 @@ function createGrid(squareTotal) {
 
     squareWidth = 1 / squareTotal;
 
-    // gridContainer = document.querySelector('.gridContainer');
-
     for(i = 0; i < squareTotal * (squareTotal); ++i) {
 
         gridSquare = document.createElement('div');
@@ -46,8 +44,6 @@ function createGrid(squareTotal) {
 
 function removeGrid() {
     
-    // gridContainer = document.querySelector('.gridContainer');
-
     while (gridContainer.hasChildNodes()) { 
     gridContainer.firstChild.remove();
     }
@@ -56,11 +52,12 @@ function removeGrid() {
 
 createGrid(16);
 
-//  gridSquare = document.querySelector('.gridContainer');
-
 gridContainer.addEventListener('mouseover', (event) => {
 
-let target = event.target;
-target.style.background = '#ccc';
+    let target = event.target;
+    
+    currentValue = target.getAttribute(target);
+    
+    target.style.background = 'rgb(10% 10% 10%)';    
 
 });
