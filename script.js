@@ -13,19 +13,21 @@
     newSizeBtn = document.querySelector('#newsketch');
     newSizeBtn.addEventListener('click', () => {
     
-    removeGrid();
+        removeGrid();
 
-    squareTotal = prompt('Enter number of squares per side (less than 100)')
-        if(squareTotal > 100) {
-            alert('Please enter a positive number less than 100');
-        }
-        else{ 
-            createGrid(squareTotal)
-        }
-    })
+        squareTotal = prompt('Enter number of squares per side (less than 100)')
+            if(squareTotal > 100) {
+                alert('Please enter a positive number less than 100');
+          }
+            else{ 
+             createGrid(squareTotal)
+            }
+        })
+
 
 clearSketchBtn = document.querySelector('#clearsketch');
 clearSketchBtn.addEventListener('click', ()=> removeGrid());
+
 
 function createGrid(squareTotal) {
 
