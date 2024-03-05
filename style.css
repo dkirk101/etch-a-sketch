@@ -9,6 +9,7 @@
 
 .gridsquare {
     flex:auto;
+    background-color: black;
 }
 
 .gridsquare:hover {
