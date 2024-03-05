@@ -4,12 +4,14 @@
     // divs must be created using JavaScript
     // put grid squares inside a container div
     // use flexbox to make the grid
-    
+
 //Hover effects change color of grid squares
     // event listeners
 
-newSizeBtn = document.querySelector('#newsketch');
-newSizeBtn.addEventListener('click', () => {
+    gridContainer = document.querySelector('.gridContainer');
+
+    newSizeBtn = document.querySelector('#newsketch');
+    newSizeBtn.addEventListener('click', () => {
     
     removeGrid();
 
@@ -29,7 +31,7 @@ function createGrid(squareTotal) {
 
     squareWidth = 1 / squareTotal;
 
-    gridContainer = document.querySelector('.gridContainer');
+    // gridContainer = document.querySelector('.gridContainer');
 
     for(i = 0; i < squareTotal * (squareTotal); ++i) {
 
@@ -41,9 +43,10 @@ function createGrid(squareTotal) {
 }
 };
 
+
 function removeGrid() {
     
-    gridContainer = document.querySelector('.gridContainer');
+    // gridContainer = document.querySelector('.gridContainer');
 
     while (gridContainer.hasChildNodes()) { 
     gridContainer.firstChild.remove();
@@ -53,9 +56,10 @@ function removeGrid() {
 
 createGrid(16);
 
-gridSquare = document.querySelector('.gridContainer');
-gridSquare.addEventListener('mouseover', (event) => {
-    
+//  gridSquare = document.querySelector('.gridContainer');
+
+gridContainer.addEventListener('mouseover', (event) => {
+
 let target = event.target;
 target.style.background = '#ccc';
 
