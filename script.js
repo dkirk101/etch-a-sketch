@@ -52,8 +52,6 @@ function removeGrid() {
 
 }
 
-createGrid(16);
-
 gridContainer.addEventListener('mouseover', (event) => {
 
     let target = event.target;
@@ -63,3 +61,5 @@ gridContainer.addEventListener('mouseover', (event) => {
     target.style.background = 'rgb(10% 10% 10%)';    
 
 });
+
+createGrid(16);
